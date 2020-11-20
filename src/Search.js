@@ -25,24 +25,11 @@ const Search = () => {
       const results = result.data.results;
 
       const filteredResults = results.filter(item => {
-        const map = {};
-        map.title = item.title;
-        map.author = item.byline;
-        map.section = item.section;
-
-        const values = Object.values(map)
-        
-        let output = '';
-        if (values.toString().toLowerCase().includes(searchTerm.toLowerCase())) {
-          output += values;
-        }
-
-        console.log(output)
-
-        return output.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchSearchTerm = x => x.toLowerCase().includes(searchTerm.toLowerCase());
+        return (matchSearchTerm(item.section) || matchSearchTerm(item.byline) || matchSearchTerm(item.title))
       });
 
-      // console.log(filteredResults)
+      console.log(filteredResults)
       
       // only render upon keypress
       if (initialRender.current) {
