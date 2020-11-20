@@ -14,7 +14,8 @@ const Articles = ({ articles }) => {
               key={i}
               title={item.title}
               author={item.byline}
-              section={item.section}  
+              section={item.section.toUpperCase()}  
+              url={item.url}
             />
           </div>
         ))
