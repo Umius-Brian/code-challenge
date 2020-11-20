@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-// render Card component
+// set condition if results are returned
 const Articles = ({ articles }) => {
   return (
     <div className='articles'>
@@ -17,6 +17,7 @@ const Articles = ({ articles }) => {
               section={item.section.toUpperCase()}  
               url={item.url}
               image={item.multimedia[4].url}
+              alt={item.multimedia[4].caption}
             />
           </div>
         ))

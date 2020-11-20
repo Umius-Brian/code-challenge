@@ -12,7 +12,6 @@ const Search = () => {
   // stops initial render
   const initialRender = useRef(true);
 
-
   // fetch data from api upon initial render
   // not entirely secure to store env variables in client, however, it's fine for the sake of this app
   useEffect(() => {
@@ -28,8 +27,6 @@ const Search = () => {
         const matchSearchTerm = x => x.toLowerCase().includes(searchTerm.toLowerCase());
         return (matchSearchTerm(item.section) || matchSearchTerm(item.byline) || matchSearchTerm(item.title))
       });
-
-      console.log(filteredResults)
       
       // only render upon keypress
       if (initialRender.current) {
