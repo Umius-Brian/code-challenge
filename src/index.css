@@ -14,9 +14,20 @@ body {
   margin: 2%;
 }
 
-.card {
+.articles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
   grid-gap: 3em;
   padding: 2em;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+header {
+  text-align: center;
+  margin: 1%;
+  font-size: 5em;
+  border-bottom: 3px solid rgb(249, 236, 101);
 }
