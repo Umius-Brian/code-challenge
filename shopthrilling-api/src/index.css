@@ -24,9 +24,16 @@ body {
 
 .articles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
   grid-gap: 3em;
   padding: 2em;
+}
+
+.card a, h2 {
+  color: #32444b;
+}
+
+.card h3 {
+  color: #667074;
 }
 
 input:focus::placeholder {
@@ -52,3 +59,22 @@ img {
   max-width: 100%;
   margin: 1em auto;
 }
+
+@media (max-width: 500px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 501px) {
+  .articles {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 800px) {
+  .articles {
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+  }
+}
+
