@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Articles from './Articles';
 import axios from 'axios';
 
 const Search = () => {
@@ -15,8 +16,10 @@ const Search = () => {
       )
       .catch(e => console.log(e))
 
-      console.log(result)
+      const results = result.data.results
       
+      setData([]);
+      setData(results)
     };
     fetchData();
   })
@@ -29,6 +32,7 @@ const Search = () => {
         placeholder='Search Science Articles'
         value={searchTerm}
       />
+      <Articles articles={data}/>
     </div>
   )
 }
