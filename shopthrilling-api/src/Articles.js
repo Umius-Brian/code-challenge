@@ -16,6 +16,7 @@ const Articles = ({ articles }) => {
               author={item.byline}
               section={item.section.toUpperCase()}  
               url={item.url}
+              image={item.multimedia[4].url}
             />
           </div>
         ))
