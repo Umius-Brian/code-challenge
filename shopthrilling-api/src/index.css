@@ -9,3 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.search-results {
+  text-align: center;
+  margin: 2%;
+}
