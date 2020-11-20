@@ -14,6 +14,14 @@ body {
   margin: 2%;
 }
 
+#input {
+  font-family: inherit;
+  font-size: 1.5em;
+  text-align: center;
+  font-style: italic;
+  outline: none;
+}
+
 .articles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
